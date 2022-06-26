@@ -1,12 +1,10 @@
 #include <iostream>
 #include <array>
 #include <vector>
-#include <random>
 
 
 class AES128 {
 public:
-    static std::vector<unsigned char> generate_random_key();
     static std::vector<std::vector<unsigned char>> key_expansion(std::vector<unsigned char> key_old);
     static std::vector<unsigned char> encrypt_block(std::vector<unsigned char> block, std::vector<unsigned char> key, std::vector<std::vector<unsigned char>> key_schedule);
     static std::vector<unsigned char> decrypt_block(std::vector<unsigned char> block, std::vector<unsigned char> key, std::vector<std::vector<unsigned char>> key_schedule);

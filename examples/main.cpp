@@ -93,7 +93,10 @@ int main() {
 
 
     std::vector<unsigned char> password = {'D', 'o', ' ', 'n', 'o', 't', ' ', 'u', 's', 'e', ' ', 't', 'h', 'i', 's', ' ', 'p', 'a', 's', 's', 'w', 'o', 'r', 'd', '.', 'I', 't', ' ', 'i', 's', ' ', 'e', 'a', 's', 'y', ' ', 't', 'o', ' ', 'h', 'a', 'c', 'k', '.'}; //Длина пароля должна быть от 8 символов.
-    std::vector<unsigned char> key = Cryptor::generate_key_from_password(password, 100000); //В качестве параметра iterations необходимо указать сколько раз будет хешироваться пароль. Принимаются значения от 1 000 до 100 000. Чем больше значение, тем дольше выполняется функция и тем сильнее безопасность. В качестве альтернативы можно использовать функцию AES128::generate_random_key (в этом случае создание пароля не требуется).
+    std::vector<unsigned char> key = Cryptor::generate_key_from_password(password, 100000); //В качестве параметра iterations необходимо указать сколько раз будет хешироваться пароль. Принимаются значения от 1 000 до 100 000. Чем больше значение, тем дольше выполняется функция и тем сильнее безопасность.
+    for (int i = 0; i < key.size(); i = i + 1) {
+        std::cout << (int)key[i] << std::endl;
+    }
     std::vector<std::vector<unsigned char>> key_schedule = AES128::key_expansion(key);
 
 
