@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.21)
 project(Cryptor)
 set(CMAKE_CXX_STANDARD 14)
-add_executable(Cryptor ../examples/main.cpp ../src/UnsignedInt128.hpp ../src/UnsignedInt128.cpp ../src/AES128.hpp ../src/AES128.cpp ../src/ECB.hpp ../src/ECB.cpp ../src/CTR.hpp ../src/CTR.cpp ../src/SHA256.hpp ../src/SHA256.cpp ../src/Cryptor.hpp ../src/Cryptor.cpp)
+add_executable(Cryptor ../src/main.cpp ../src/UnsignedInt128.hpp ../src/UnsignedInt128.cpp ../src/AES128.hpp ../src/AES128.cpp ../src/ECB.hpp ../src/ECB.cpp ../src/CTR.hpp ../src/CTR.cpp ../src/SHA256.hpp ../src/SHA256.cpp ../src/Cryptor.hpp ../src/Cryptor.cpp)
 add_definitions(-Werror)
 add_definitions(-O3)
 find_package(OpenMP)
